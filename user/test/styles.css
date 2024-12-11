@@ -1,0 +1,134 @@
+/* First define the theme variables */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f3f4f6;
+    --text-primary: #1F2937;
+    --text-secondary: #4B5563;
+    --border-color: #e5e7eb;
+    --accent-color: #8B5CF6;
+    --card-bg: #ffffff;
+    --modal-bg: #ffffff;
+}
+
+/* Add prefers-color-scheme media query for dark mode */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #1a1c23;
+        --bg-secondary: #121317;
+        --text-primary: #ffffff;
+        --text-secondary: #9ca3af;
+        --border-color: #374151;
+        --accent-color: #9f75ff;
+        --card-bg: #242631;
+        --modal-bg: #242631;
+    }
+}
+
+/* Base styles */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+/* Card styles */
+.card,
+.consultation-card,
+.pet-card,
+.dashboard-card,
+.info-card,
+[class*="card"] {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Container styles */
+.details-container,
+.content-box,
+.content-wrapper,
+.main-container,
+.dashboard-content,
+.consultation-details,
+.pet-details,
+.vaccination-details,
+.food-guide-content,
+.training-content,
+[class*="container"],
+[class*="content"],
+[class*="box"] {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Form elements */
+input, 
+select, 
+textarea {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+/* Table styles */
+table,
+.table {
+    background-color: var(--card-bg);
+    color: var(--text-primary);
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Modal styles */
+.modal-content,
+.modal-header,
+.modal-body,
+.modal-footer {
+    background-color: var(--modal-bg);
+    color: var(--text-primary);
+    border-color: var(--border-color);
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: var(--bg-secondary);
+}
+
+/* Dropdown styles */
+.dropdown-menu {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+.dropdown-item {
+    color: var(--text-primary);
+}
+
+.dropdown-item:hover {
+    background-color: var(--bg-secondary);
+}
+
+/* Utility classes */
+.bg-white {
+    background-color: var(--card-bg) !important;
+}
+
+.text-dark {
+    color: var(--text-primary) !important;
+}

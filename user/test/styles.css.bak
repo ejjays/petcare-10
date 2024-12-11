@@ -1,0 +1,226 @@
+/* Light theme (default) */
+:root {
+  /* Primary colors */
+  --primary-color: #4CAF50;
+  --primary-hover: #45a049;
+  --secondary-color: #2196F3;
+  
+  /* Background colors */
+  --bg-main: #ffffff;
+  --bg-sidebar: #f5f5f5;
+  --bg-card: #ffffff;
+  --bg-modal: #ffffff;
+  
+  /* Text colors */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-muted: #888888;
+  
+  /* Border colors */
+  --border-color: #dddddd;
+  --border-light: #eeeeee;
+  
+  /* Status colors */
+  --success-color: #4CAF50;
+  --warning-color: #ff9800;
+  --error-color: #f44336;
+  
+  /* Form elements */
+  --input-bg: #ffffff;
+  --input-border: #cccccc;
+  --input-focus: #4CAF50;
+  
+  /* Button colors */
+  --btn-primary-bg: #4CAF50;
+  --btn-primary-text: #ffffff;
+  --btn-secondary-bg: #f5f5f5;
+  --btn-secondary-text: #333333;
+  
+  /* Shadow */
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Primary colors */
+    --primary-color: #66bb6a;
+    --primary-hover: #81c784;
+    --secondary-color: #42a5f5;
+    
+    /* Background colors */
+    --bg-main: #1a1a1a;
+    --bg-sidebar: #2d2d2d;
+    --bg-card: #333333;
+    --bg-modal: #2d2d2d;
+    
+    /* Text colors */
+    --text-primary: #ffffff;
+    --text-secondary: #cccccc;
+    --text-muted: #999999;
+    
+    /* Border colors */
+    --border-color: #404040;
+    --border-light: #404040;
+    
+    /* Status colors */
+    --success-color: #66bb6a;
+    --warning-color: #ffa726;
+    --error-color: #ef5350;
+    
+    /* Form elements */
+    --input-bg: #333333;
+    --input-border: #404040;
+    --input-focus: #66bb6a;
+    
+    /* Button colors */
+    --btn-primary-bg: #66bb6a;
+    --btn-primary-text: #ffffff;
+    --btn-secondary-bg: #404040;
+    --btn-secondary-text: #ffffff;
+    
+    /* Shadow */
+    --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Global styles */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border-color);
+}
+
+/* Card styles */
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+}
+
+/* Form styles */
+input, select, textarea {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--text-primary);
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: var(--input-focus);
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
+}
+
+/* Modal styles */
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: var(--bg-modal);
+  border: 1px solid var(--border-color);
+}
+
+/* Table styles */
+table {
+  border-color: var(--border-color);
+}
+
+tr:nth-child(even) {
+  background-color: var(--bg-sidebar);
+}
+
+/* Status indicators */
+.status-success {
+  color: var(--success-color);
+}
+
+.status-warning {
+  color: var(--warning-color);
+}
+
+.status-error {
+  color: var(--error-color);
+}
+
+/* Links */
+a {
+  color: var(--secondary-color);
+}
+
+/* Text utilities */
+.text-muted {
+  color: var(--text-muted);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+    margin: 10px 0;
+  }
+  
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+}
+
+
+/* Light theme (default) */
+:root {
+  --card-bg: #ffffff;
+  --card-text: #333333;
+  --card-border: #dddddd;
+  --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --card-bg: #333333;
+    --card-text: #ffffff;
+    --card-border: #404040;
+    --card-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Card specific styles */
+.card {
+  background-color: var(--card-bg);
+  color: var(--card-text);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+
+/* If you have specific card content elements, style them too */
+.card-title {
+  color: var(--card-text);
+}
+
+.card-text {
+  color: var(--card-text);
+}
+
+.card-footer {
+  background-color: var(--card-bg);
+  border-top: 1px solid var(--card-border);
+}
